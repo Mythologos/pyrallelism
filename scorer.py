@@ -1,6 +1,6 @@
 from argparse import ArgumentParser, Namespace
 from os import listdir, path
-from typing import Any, Callable, Sequence, Type
+from typing import Any, Callable, Sequence
 
 from natsort import natsorted
 

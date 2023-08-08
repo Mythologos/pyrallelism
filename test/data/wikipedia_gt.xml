@@ -1,0 +1,261 @@
+<document>
+    <word id="1" cont="The"/>
+    <word id="2" cont="following"/>
+    <word id="3" cont="sentences"/>
+    <word id="4" cont="and"/>
+    <word id="5" cont="verses"/>
+    <word id="6" cont="possess"/>
+    <word id="7" cont="&quot;"/>
+    <word id="8" cont="similarity"/>
+    <word id="9" cont="in"/>
+    <word id="10" cont="structure"/>
+    <word id="11" cont="&quot;"/>
+    <word id="12" cont="in"/>
+    <word id="13" cont="words"/>
+    <word id="14" cont="and"/>
+    <word id="15" cont="phrases"/>
+    <word id="16" cont=":"/>
+    <word id="17" cont="She"/>
+    <word id="18" cont="tried"/>
+    <word id="19" cont="to"/>
+    <word id="20" cont="make"/>
+    <word id="21" cont="the"/>
+    <word id="22" cont="law"/>
+    <word id="23" cont="clear"/>
+    <word id="24" cont=","/>
+    <word id="25" cont="precise"/>
+    <word id="26" cont="and"/>
+    <word id="27" cont="equitable"/>
+    <word id="28" cont="."/>
+    <word id="29" cont="In"/>
+    <word id="30" cont="the"/>
+    <word id="31" cont="quote"/>
+    <word id="32" cont="above"/>
+    <word id="33" cont=","/>
+    <word id="34" cont="the"/>
+    <word id="35" cont="compounded"/>
+    <word id="36" cont="adjectives"/>
+    <word id="37" cont="serve"/>
+    <word id="38" cont="as"/>
+    <word id="39" cont="parallel"/>
+    <word id="40" cont="elements"/>
+    <word id="41" cont="and"/>
+    <word id="42" cont="support"/>
+    <word id="43" cont="the"/>
+    <word id="44" cont="noun"/>
+    <word id="45" cont="&quot;"/>
+    <word id="46" cont="law"/>
+    <word id="47" cont="&quot;"/>
+    <word id="48" cont="."/>
+    <word id="49" cont="Her"/>
+    <word id="50" cont="purpose"/>
+    <word id="51" cont="was"/>
+    <word id="52" cont="to" parallelism_id_1="1" branch_id_1="1"/>
+    <word id="53" cont="impress" parallelism_id_1="1" branch_id_1="1"/>
+    <word id="54" cont="the" parallelism_id_1="1" branch_id_1="1"/>
+    <word id="55" cont="ignorant" parallelism_id_1="1" branch_id_1="1"/>
+    <word id="56" cont=","/>
+    <word id="57" cont="to" parallelism_id_1="1" branch_id_1="2"/>
+    <word id="58" cont="perplex" parallelism_id_1="1" branch_id_1="2"/>
+    <word id="59" cont="the" parallelism_id_1="1" branch_id_1="2"/>
+    <word id="60" cont="dubious" parallelism_id_1="1" branch_id_1="2"/>
+    <word id="61" cont=","/>
+    <word id="62" cont="and"/>
+    <word id="63" cont="to" parallelism_id_1="1" branch_id_1="3"/>
+    <word id="64" cont="confound" parallelism_id_1="1" branch_id_1="3"/>
+    <word id="65" cont="the" parallelism_id_1="1" branch_id_1="3"/>
+    <word id="66" cont="scrupulous" parallelism_id_1="1" branch_id_1="3"/>
+    <word id="67" cont="."/>
+    <word id="68" cont="In"/>
+    <word id="69" cont="the"/>
+    <word id="70" cont="above"/>
+    <word id="71" cont="quote"/>
+    <word id="72" cont=","/>
+    <word id="73" cont="three"/>
+    <word id="74" cont="infinitive"/>
+    <word id="75" cont="verb"/>
+    <word id="76" cont="phrases"/>
+    <word id="77" cont="produce"/>
+    <word id="78" cont="the"/>
+    <word id="79" cont="parallel"/>
+    <word id="80" cont="structure"/>
+    <word id="81" cont="supporting"/>
+    <word id="82" cont="the"/>
+    <word id="83" cont="noun"/>
+    <word id="84" cont="&quot;"/>
+    <word id="85" cont="purpose"/>
+    <word id="86" cont="&quot;"/>
+    <word id="87" cont="."/>
+    <word id="88" cont="Note"/>
+    <word id="89" cont="that"/>
+    <word id="90" cont="this"/>
+    <word id="91" cont="rhetorical"/>
+    <word id="92" cont="device"/>
+    <word id="93" cont="requires"/>
+    <word id="94" cont="that"/>
+    <word id="95" cont="the"/>
+    <word id="96" cont="coordinate"/>
+    <word id="97" cont="elements"/>
+    <word id="98" cont="agree"/>
+    <word id="99" cont="with"/>
+    <word id="100" cont="one"/>
+    <word id="101" cont="another"/>
+    <word id="102" cont="grammatically"/>
+    <word id="103" cont=":"/>
+    <word id="104" cont="&quot;"/>
+    <word id="105" cont="nouns" parallelism_id_1="2" branch_id_1="1"/>
+    <word id="106" cont="with" parallelism_id_1="2" branch_id_1="1"/>
+    <word id="107" cont="nouns" parallelism_id_1="2" branch_id_1="1"/>
+    <word id="108" cont=","/>
+    <word id="109" cont="infinitive" parallelism_id_1="2" branch_id_1="2"/>
+    <word id="110" cont="verb" parallelism_id_1="2" branch_id_1="2"/>
+    <word id="111" cont="phrases" parallelism_id_1="2" branch_id_1="2"/>
+    <word id="112" cont="with" parallelism_id_1="2" branch_id_1="2"/>
+    <word id="113" cont="infinitive" parallelism_id_1="2" branch_id_1="2"/>
+    <word id="114" cont="verb" parallelism_id_1="2" branch_id_1="2"/>
+    <word id="115" cont="phrases" parallelism_id_1="2" branch_id_1="2"/>
+    <word id="116" cont="and"/>
+    <word id="117" cont="adverb" parallelism_id_1="2" branch_id_1="3"/>
+    <word id="118" cont="clauses" parallelism_id_1="2" branch_id_1="3"/>
+    <word id="119" cont="with" parallelism_id_1="2" branch_id_1="3"/>
+    <word id="120" cont="adverb" parallelism_id_1="2" branch_id_1="3"/>
+    <word id="121" cont="clauses" parallelism_id_1="2" branch_id_1="3"/>
+    <word id="122" cont="."/>
+    <word id="123" cont="&quot;"/>
+    <word id="124" cont="When"/>
+    <word id="125" cont="the"/>
+    <word id="126" cont="coordinate"/>
+    <word id="127" cont="elements"/>
+    <word id="128" cont="possess"/>
+    <word id="129" cont="the"/>
+    <word id="130" cont="same"/>
+    <word id="131" cont="number"/>
+    <word id="132" cont="of"/>
+    <word id="133" cont="words"/>
+    <word id="134" cont="("/>
+    <word id="135" cont="or"/>
+    <word id="136" cont="in"/>
+    <word id="137" cont="the"/>
+    <word id="138" cont="example"/>
+    <word id="139" cont="below"/>
+    <word id="140" cont=","/>
+    <word id="141" cont="the"/>
+    <word id="142" cont="same"/>
+    <word id="143" cont="number"/>
+    <word id="144" cont="of"/>
+    <word id="145" cont="syllables"/>
+    <word id="146" cont=")"/>
+    <word id="147" cont="the"/>
+    <word id="148" cont="scheme"/>
+    <word id="149" cont="is"/>
+    <word id="150" cont="termed"/>
+    <word id="151" cont="isocolon"/>
+    <word id="152" cont=":"/>
+    <word id="153" cont="I'll" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="154" cont="give" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="155" cont="my" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="156" cont="jewels" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="157" cont="for" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="158" cont="a" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="159" cont="set" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="160" cont="of" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="161" cont="beads" parallelism_id_1="3" branch_id_1="1"/>
+    <word id="162" cont=","/>
+    <word id="163" cont="My" parallelism_id_1="3" branch_id_1="2"/>
+    <word id="164" cont="gorgeous" parallelism_id_1="3" branch_id_1="2"/>
+    <word id="165" cont="palace" parallelism_id_1="3" branch_id_1="2"/>
+    <word id="166" cont="for" parallelism_id_1="3" branch_id_1="2"/>
+    <word id="167" cont="a" parallelism_id_1="3" branch_id_1="2"/>
+    <word id="168" cont="hermitage" parallelism_id_1="3" branch_id_1="2"/>
+    <word id="169" cont=","/>
+    <word id="170" cont="My" parallelism_id_1="3" branch_id_1="3"/>
+    <word id="171" cont="gay" parallelism_id_1="3" branch_id_1="3"/>
+    <word id="172" cont="apparel" parallelism_id_1="3" branch_id_1="3"/>
+    <word id="173" cont="for" parallelism_id_1="3" branch_id_1="3"/>
+    <word id="174" cont="an" parallelism_id_1="3" branch_id_1="3"/>
+    <word id="175" cont="almsman's" parallelism_id_1="3" branch_id_1="3"/>
+    <word id="176" cont="gown" parallelism_id_1="3" branch_id_1="3"/>
+    <!-- Seems like there should be a comma here, but there's currently not one on the Wikipedia document (08.07.2023). -->
+    <word id="177" cont="My" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="178" cont="figured" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="179" cont="goblets" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="180" cont="for" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="181" cont="a" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="182" cont="dish" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="183" cont="of" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="184" cont="wood" parallelism_id_1="3" branch_id_1="4"/>
+    <word id="185" cont="."/>
+    <word id="186" cont="-"/>
+    <word id="187" cont="Shakespeare"/>
+    <word id="188" cont=","/>
+    <word id="189" cont="Richard"/>
+    <word id="190" cont="II"/>
+    <word id="191" cont="Synonymous"/>
+    <word id="192" cont="parallelism"/>
+    <word id="193" cont="in"/>
+    <word id="194" cont="which"/>
+    <word id="195" cont="one"/>
+    <word id="196" cont="couplet"/>
+    <word id="197" cont="expresses"/>
+    <word id="198" cont="similar"/>
+    <word id="199" cont="concepts"/>
+    <word id="200" cont="can"/>
+    <word id="201" cont="also"/>
+    <word id="202" cont="be"/>
+    <word id="203" cont="combined"/>
+    <word id="204" cont="with"/>
+    <word id="205" cont="antithetical"/>
+    <word id="206" cont="parallelism"/>
+    <word id="207" cont="in"/>
+    <word id="208" cont="which"/>
+    <word id="209" cont="a"/>
+    <word id="210" cont="second"/>
+    <word id="211" cont="couplet"/>
+    <word id="212" cont="contrasts"/>
+    <word id="213" cont="with"/>
+    <word id="214" cont="the"/>
+    <word id="215" cont="first"/>
+    <word id="216" cont="."/>
+    <word id="217" cont="For"/>
+    <word id="218" cont="example"/>
+    <word id="219" cont=","/>
+    <word id="220" cont="synonymous"/>
+    <word id="221" cont="and"/>
+    <word id="222" cont="antithetical"/>
+    <word id="223" cont="parallelism"/>
+    <word id="224" cont="occur"/>
+    <word id="225" cont="in"/>
+    <word id="226" cont="Revelation"/>
+    <word id="227" cont="22"/>
+    <word id="228" cont=":"/>
+    <word id="229" cont="11"/>
+    <word id="230" cont=":"/>
+    <word id="231" cont="Let" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="232" cont="the" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="233" cont="evildoer" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="234" cont="still" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="235" cont="do" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="236" cont="evil" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="237" cont="," parallelism_id_1="4" branch_id_1="1"/>
+    <word id="238" cont="and" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="239" cont="the" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="240" cont="filthy" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="241" cont="still" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="242" cont="be" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="243" cont="filthy" parallelism_id_1="4" branch_id_1="1"/>
+    <word id="244" cont=","/>
+    <word id="245" cont="and"/>
+    <word id="246" cont="the" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="247" cont="righteous" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="248" cont="still" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="249" cont="do" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="250" cont="right" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="251" cont="." parallelism_id_1="4" branch_id_1="2"/>
+    <word id="252" cont="and" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="253" cont="the" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="254" cont="holy" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="255" cont="still" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="256" cont="be" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="257" cont="holy" parallelism_id_1="4" branch_id_1="2"/>
+    <word id="258" cont="."/>
+</document>

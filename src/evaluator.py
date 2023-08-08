@@ -28,7 +28,7 @@ def evaluate_bipartite_parallelism_metric(hypotheses: ParallelismDirectory, refe
     a `list` of coordinates to that matrix which pertain to the maximum matching generated  by the LSA algorithm.
     """
     scoring_kwargs = {} if scoring_kwargs is None else scoring_kwargs
-    size_kwargs = {} if scoring_kwargs is None else size_kwargs
+    size_kwargs = {} if size_kwargs is None else size_kwargs
 
     scoring_matrix: NDArray[int] = metric.score.create_score_matrix(hypotheses, references, **scoring_kwargs)
     entries: list[tuple[int, int]] = LinearSumAssigner.get_lsa_entries(scoring_matrix)

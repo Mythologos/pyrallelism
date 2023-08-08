@@ -15,6 +15,9 @@ We release this codebase under a [**TODO**: license].
 
 ...
 
+We also have a set of unit tests. For these unit tests, 
+we source data from the Wikipedia article on rhetorical parallelism.
+
 ## Codebase
 
 ### Interface
@@ -84,4 +87,14 @@ To cite this library, please refer to the following paper:
 
 ```
 ...
+```
+
+Our sample data for unit testing comes from the following resource:
+
+```
+@misc{wikipediacontributorsParallelismRhetoricWikipedia2023,
+  title = {Parallelism (Rhetoric) \textemdash{} {{Wikipedia}}, the Free Encyclopedia},
+  author = {{Wikipedia contributors}},
+  year = {2023}
+}
 ```

@@ -11,21 +11,25 @@ class TSVLoader(BaseParallelismLoader):
         with open(filepath, encoding="utf-8", mode="r") as input_file:
             rows: list[str] = input_file.readlines()
             header_row, *table_rows = rows
+            header_items = header_row.strip().split("\t")
 
-            if (len(header_row) - 1) % 2 == 0:
-                raise ValueError("The number of ID lines (sans the token) must be divisible by 3, "
+            if (len(header_items) - 1) % 2 != 0:
+                raise ValueError("The number of ID lines (sans the token) must be divisible by 2, "
                                  "with 2 IDs (for a parallelism and branch) being required per stratum.")
 
-            stratum_count: int = (len(header_row) - 1) % 2 if kwargs["stratum_count"] is None \
+            stratum_count: int = (len(header_items) - 1) % 2 if kwargs["stratum_count"] is None \
                 else kwargs["stratum_count"]
 
             data_rows: list[list[tuple[int, int]]] = []
             for row in table_rows:
-                _, *ids = row.split("/t")
-                stratum_ids: list[tuple[int, int]] = [
-                    (int(parallelism_id), int(branch_id)) for index in range(0, len(ids), 2)
-                    for (parallelism_id, branch_id) in ids[index:index + 2]
-                ]
+                _, *ids = row.strip().split("\t")
+
+                stratum_ids: list[tuple[int, int]] = []
+                for index in range(0, len(ids), 2):
+                    parallelism_id, branch_id = ids[index:index + 2]
+                    current_ids: tuple[int, int] = (int(parallelism_id), int(branch_id))
+                    stratum_ids.append(current_ids)
+
                 assert len(stratum_ids) == stratum_count
                 data_rows.append(stratum_ids)
 

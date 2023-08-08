@@ -1,7 +1,7 @@
 from abc import abstractmethod
 from typing import Collection
 
-from src.primitives.typing import Parallelism
+from pyrallelism.primitives.typing import Parallelism
 
 
 class BaseConverter:

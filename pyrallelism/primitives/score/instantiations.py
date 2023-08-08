@@ -1,10 +1,10 @@
 from numpy import int64, zeros
 from numpy.typing import NDArray
 
-from src.primitives.assignment.lsa import LinearSumAssigner
-from src.primitives.typing import BranchedWordSet, Parallelism
-from src.primitives.score.base import ScoringFunction
-from src.primitives.conversion.instantiations import BranchedWordConverter
+from pyrallelism.primitives.assignment.lsa import LinearSumAssigner
+from pyrallelism.primitives.typing import BranchedWordSet, Parallelism
+from pyrallelism.primitives.score.base import ScoringFunction
+from pyrallelism.primitives.conversion.instantiations import BranchedWordConverter
 
 
 class ExactScorer(ScoringFunction):

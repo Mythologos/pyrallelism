@@ -1,8 +1,8 @@
 from enum import StrEnum
 from typing import Type
 
-from src.primitives.loading.base import BaseParallelismLoader
-from src.primitives.loading.instantiations import TSVLoader, XMLLoader
+from pyrallelism.primitives.loading.base import BaseParallelismLoader
+from pyrallelism.primitives.loading.instantiations import TSVLoader, XMLLoader
 
 
 class DefinedLoader(StrEnum):

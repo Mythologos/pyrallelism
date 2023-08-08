@@ -1,23 +1,25 @@
 from argparse import ArgumentParser, Namespace
 from os import listdir, path
-from typing import Any, Callable, Sequence
+from typing import Any, Sequence, Type
 
 from natsort import natsorted
 
-from src.evaluator import evaluate_bipartite_parallelism_metric
-from src.primitives.evaluation_metric import DefinedMetric, get_metric
-from src.primitives.loading.interface import DefinedLoader, get_loader
-from src.primitives.typing import ParallelismDirectory
-from src.structures.confusion_matrix import ReducedConfusionMatrix
-from src.utils.output_format import DefinedFormat, get_output_filetype
+from pyrallelism.evaluator import evaluate_bipartite_parallelism_metric
+from pyrallelism.primitives.evaluation_metric import DefinedMetric, get_metric
+from pyrallelism.primitives.loading import BaseParallelismLoader
+from pyrallelism.primitives.loading.interface import DefinedLoader, get_loader
+from pyrallelism.primitives.typing import ParallelismDirectory
+from pyrallelism.structures.confusion_matrix import ReducedConfusionMatrix
+from pyrallelism.utils.output_format import DefinedFormat, get_output_filetype
 
 
-def collect_directories(directory_filepath: str, loader: Callable, **kwargs) -> \
+def collect_directories(directory_filepath: str, loader: Type[BaseParallelismLoader], **kwargs) -> \
         tuple[list[str], Sequence[ParallelismDirectory]]:
     sorted_filenames: list[str] = natsorted(listdir(directory_filepath))
     parallelism_directories: list[ParallelismDirectory] = []
     for filename in sorted_filenames:
-        new_directory: ParallelismDirectory = loader(f"{directory_filepath}/{filename}", **kwargs)
+        current_filepath: str = f"{directory_filepath}/{filename}"
+        new_directory: ParallelismDirectory = loader.load_parallelism_directory(current_filepath, **kwargs)
         parallelism_directories.append(new_directory)
     parallelism_directories: Sequence[ParallelismDirectory] = tuple(parallelism_directories)
     return sorted_filenames, parallelism_directories
@@ -50,8 +52,10 @@ if __name__ == "__main__":
     loader_kwargs: dict[str, Any] = {"stratum_count": args.stratum_count}
 
     if path.isfile(args.hypothesis_path) and path.isfile(args.reference_path):
-        hypothesis_dirs: Sequence[ParallelismDirectory] = (hypothesis_loader(args.hypothesis_path, **loader_kwargs),)
-        reference_dirs: Sequence[ParallelismDirectory] = (reference_loader(args.reference_path, **loader_kwargs),)
+        hypothesis_dirs: Sequence[ParallelismDirectory] = \
+            (hypothesis_loader.load_parallelism_directory(args.hypothesis_path, **loader_kwargs),)
+        reference_dirs: Sequence[ParallelismDirectory] = \
+            (reference_loader.load_parallelism_directory(args.reference_path, **loader_kwargs),)
         hypothesis_filename: str = args.hypothesis_path.split("/")[-1]
         reference_filename: str = args.reference_path.split("/")[-1]
         paired_filenames: Sequence[dict[str, str]] = (

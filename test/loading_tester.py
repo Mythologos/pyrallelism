@@ -1,12 +1,17 @@
 from typing import Sequence, Type
 from unittest import TestCase
 
-from src.primitives.loading.base import BaseParallelismLoader
-from src.primitives.loading.instantiations import TSVLoader, XMLLoader
-from src.primitives.typing import ParallelismDirectory, Parallelism
+from pyrallelism.primitives.loading.base import BaseParallelismLoader
+from pyrallelism.primitives.loading.instantiations import TSVLoader, XMLLoader
+from pyrallelism.primitives.typing import ParallelismDirectory, Parallelism
 
 
 class LoadingTester(TestCase):
+    """
+    .. py:class:: LoadingTester
+    Class to test the pre-made data-loading functions of this module.
+    Checks to see whether both are able to load the gold parallelism directory exactly.
+    """
     def setUp(self):
         self.filepath_base: str = "data"
         self.loaders: list[tuple[Type[BaseParallelismLoader], str]] = [

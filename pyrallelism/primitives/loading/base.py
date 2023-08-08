@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from src.primitives.typing import Branch, ParallelismDirectory, TokenIdentifiers
+from pyrallelism.primitives.typing import Branch, ParallelismDirectory, TokenIdentifiers
 
 
 class BaseParallelismLoader:

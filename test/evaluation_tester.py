@@ -1,15 +1,20 @@
 from typing import Sequence, TypeAlias
 from unittest import TestCase
 
-from src.evaluator import evaluate_bipartite_parallelism_metric
-from src.primitives.evaluation_metric import DefinedMetric, DEFINED_METRICS, EvaluationMetric, get_metric
-from src.primitives.loading.instantiations import XMLLoader, TSVLoader
-from src.primitives.typing import ParallelismDirectory
+from pyrallelism.evaluator import evaluate_bipartite_parallelism_metric
+from pyrallelism.primitives.evaluation_metric import DefinedMetric, DEFINED_METRICS, EvaluationMetric, get_metric
+from pyrallelism.primitives.loading.instantiations import XMLLoader, TSVLoader
+from pyrallelism.primitives.typing import ParallelismDirectory
 
 AnswerDict: TypeAlias = dict[str, tuple[int, int, int]]
 
 
 class EvaluationTester(TestCase):
+    """
+    .. py:class:: EvaluationTester
+    Class to test the main function of this module: *evaluate_bipartite_parallelism_metric*,
+    as it brings much of the underlying code together.
+    """
     def setUp(self):
         # Should define the files to be used, the desired results corresponding to each metric.
         self.base_directory = "data"

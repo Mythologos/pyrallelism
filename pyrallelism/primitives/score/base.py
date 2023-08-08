@@ -3,7 +3,7 @@ from abc import abstractmethod
 from numpy import int64, zeros
 from numpy.typing import NDArray
 
-from src.primitives.typing import Parallelism, ParallelismDirectory
+from pyrallelism.primitives.typing import Parallelism, ParallelismDirectory
 
 
 class ScoringFunction:

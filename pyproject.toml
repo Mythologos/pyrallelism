@@ -1,0 +1,31 @@
+[project]
+name = "pyrallelism"
+authors = [{name = "Stephen Bothwell", email = "sbothwel@nd.edu"}]
+version = "1.0.0"
+description = "Interface and Utilities for Bipartite Parallelism Metrics"
+readme = {file = ["README.md"], content-type = "text/markdown"}
+requires-python = ">=3.11"
+keywords = ["Metrics", "Evaluation", "Rhetorical Parallelism Detection"]
+license = {text = "???"}   # TODO: what's the license?
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Text Processing :: Markup :: XML",
+    "Topic :: Utilities"
+]
+dependencies = ["natsort", "numpy", "scipy"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["pyrallelism"]
+
+[project.scripts]
+pyrallelism = "pyrallelism:use_pyrallelism_cli"

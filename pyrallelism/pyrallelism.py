@@ -1,5 +1,6 @@
 from argparse import ArgumentParser, Namespace
 from os import listdir, path
+from sys import argv
 from typing import Any, Sequence, Type
 
 from natsort import natsorted
@@ -25,7 +26,7 @@ def collect_directories(directory_filepath: str, loader: Type[BaseParallelismLoa
     return sorted_filenames, parallelism_directories
 
 
-if __name__ == "__main__":
+def use_pyrallelism_cli():
     parser: ArgumentParser = ArgumentParser()
     parser.add_argument("hypothesis_path", type=str)
     parser.add_argument("reference_path", type=str)
@@ -35,7 +36,7 @@ if __name__ == "__main__":
     parser.add_argument("--output-filepath", type=str, default="results")
     parser.add_argument("--output-filetype", type=get_output_filetype, nargs="+", default=[DefinedFormat.CSV])
     parser.add_argument("--stratum-count", type=int, default=None)
-    args: Namespace = parser.parse_args()
+    args: Namespace = parser.parse_args(argv)
 
     if path.exists(args.hypothesis_path) is False:
         raise ValueError(f"The filepath <{args.hypothesis_path}> is not a valid filepath.")

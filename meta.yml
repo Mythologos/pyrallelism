@@ -1,0 +1,62 @@
+# Note: there are many handy hints in comments in this example -- remove them when you've finalized your recipe.
+# If your package is python based, we recommend using Grayskull to generate it instead:
+# https://github.com/conda-incubator/grayskull
+
+# Jinja variables help maintain the recipe as you'll update the version only here.
+# Using the name variable with the URL in line 16 is convenient
+# when copying and pasting from another recipe, but not really needed.
+{% set name = "pyrallelism" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/Mythologos/pyrallelism   # TODO: conda-forge wants a tarball, not a repo
+  sha256: ???   # TODO: get this! can use package field on PyPI once it's on there.
+  # sha256 is the preferred checksum -- you can get it for a file with:
+  #  `openssl sha256 <file name>`.
+  # You may need the openssl package, available on conda-forge:
+  #  `conda install openssl -c conda-forge``
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+
+about:
+  home: https://github.com/Mythologos/pyrallelism
+  summary: 'Interface and utilities for bipartite parallelism metrics in Python.'
+  description: '...'   # TODO: add a description. Can the README be imported here?
+  # Remember to specify the license variants for BSD, Apache, GPL, and LGPL.
+  # Use the SPDX identifier, e.g: GPL-2.0-only instead of GNU General Public License version 2.0
+  # See https://spdx.org/licenses/
+  license: ???   # TODO: add licensing information!
+  # The license_family, i.e. "BSD" if license is "BSD-3-Clause".
+  # Optional
+  license_family: ???
+  # It is required to include a license file in the package,
+  # (even if the license doesn't require it) using the license_file entry.
+  # Please also note that some projects have multiple license files which all need to be added using a valid yaml list.
+  # See https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#license-file
+  license_file: ???
+  # The doc_url and dev_url are optional.
+
+test:
+  imports:
+    - pyrallelism
+  commands:
+    - pip check
+
+extra:
+  recipe-maintainers:
+    # GitHub IDs for maintainers of the recipe.
+    - Mythologos

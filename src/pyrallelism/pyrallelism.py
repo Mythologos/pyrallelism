@@ -1,42 +1,30 @@
 from argparse import ArgumentParser, Namespace
-from os import listdir, path
+from os import path
 from sys import argv
-from typing import Any, Sequence, Type
+from typing import Any, Sequence
 
-from natsort import natsorted
-
-from pyrallelism.evaluator import evaluate_bipartite_parallelism_metric
-from pyrallelism.primitives.evaluation_metric import DefinedMetric, get_metric
-from pyrallelism.primitives.loading import BaseParallelismLoader
-from pyrallelism.primitives.loading.interface import DefinedLoader, get_loader
-from pyrallelism.primitives.typing import ParallelismDirectory
-from pyrallelism.structures.confusion_matrix import ReducedConfusionMatrix
-from pyrallelism.utils.output_format import DefinedFormat, get_output_filetype
-
-
-def collect_directories(directory_filepath: str, loader: Type[BaseParallelismLoader], **kwargs) -> \
-        tuple[list[str], Sequence[ParallelismDirectory]]:
-    sorted_filenames: list[str] = natsorted(listdir(directory_filepath))
-    parallelism_directories: list[ParallelismDirectory] = []
-    for filename in sorted_filenames:
-        current_filepath: str = f"{directory_filepath}/{filename}"
-        new_directory: ParallelismDirectory = loader.load_parallelism_directory(current_filepath, **kwargs)
-        parallelism_directories.append(new_directory)
-    parallelism_directories: Sequence[ParallelismDirectory] = tuple(parallelism_directories)
-    return sorted_filenames, parallelism_directories
+from .evaluator import evaluate_bipartite_parallelism_metric
+from .primitives.evaluation_metric import DefinedMetric, get_metric
+from .primitives.loading import TSVLoader, XMLLoader
+from .primitives.loading.interface import get_loader
+from .primitives.typing import ParallelismDirectory
+from .structures.confusion_matrix import ReducedConfusionMatrix
+from .utils.command_line_helpers import collect_directories
+from .utils.output_format import get_output_type, CSV_FORMAT
+from .utils.help_messages import *
 
 
-def use_pyrallelism_cli():
+def _use_pyrallelism_cli():
     parser: ArgumentParser = ArgumentParser()
-    parser.add_argument("hypothesis_path", type=str)
-    parser.add_argument("reference_path", type=str)
-    parser.add_argument("--beta", type=float, default=1)
-    parser.add_argument("--loaders", type=get_loader, nargs="+", default=[DefinedLoader.TSV, DefinedLoader.XML])
-    parser.add_argument("--metric", type=get_metric, default=DefinedMetric.EXACT_PARALLELISM_MATCH)
-    parser.add_argument("--output-filepath", type=str, default="results")
-    parser.add_argument("--output-filetype", type=get_output_filetype, nargs="+", default=[DefinedFormat.CSV])
-    parser.add_argument("--stratum-count", type=int, default=None)
-    args: Namespace = parser.parse_args(argv)
+    parser.add_argument("hypothesis_path", type=str, help=HYPOTHESIS_HELP)
+    parser.add_argument("reference_path", type=str, help=REFERENCE_HELP)
+    parser.add_argument("--beta", type=float, default=1.0, help=BETA_HELP)
+    parser.add_argument("--loaders", type=get_loader, nargs="+", default=(TSVLoader, XMLLoader), help=LOADERS_HELP)
+    parser.add_argument("--metric", type=get_metric, default=DefinedMetric.EXACT_PARALLELISM_MATCH, help=METRICS_HELP)
+    parser.add_argument("--output-filepath", type=str, default="results", help=OUTPUT_PATH_HELP)
+    parser.add_argument("--output-type", type=get_output_type, nargs="+", default=(CSV_FORMAT,), help=OUTPUT_TYPE_HELP)
+    parser.add_argument("--stratum-count", type=int, default=None, help=STRATUM_COUNT_HELP)
+    args: Namespace = parser.parse_args(argv[1:])
 
     if path.exists(args.hypothesis_path) is False:
         raise ValueError(f"The filepath <{args.hypothesis_path}> is not a valid filepath.")
@@ -60,7 +48,7 @@ def use_pyrallelism_cli():
         hypothesis_filename: str = args.hypothesis_path.split("/")[-1]
         reference_filename: str = args.reference_path.split("/")[-1]
         paired_filenames: Sequence[dict[str, str]] = (
-            {"hypothesis_filename": hypothesis_filename, "reference_filename": reference_filename}
+            {"hypothesis_filename": hypothesis_filename, "reference_filename": reference_filename},
         )
     elif path.isdir(args.hypothesis_path) and path.isdir(args.reference_path):
         hypothesis_filenames, hypothesis_dirs = \
@@ -84,9 +72,10 @@ def use_pyrallelism_cli():
             confusion_matrix, _ = evaluate_bipartite_parallelism_metric(hypotheses, references, args.metric)
             confusion_matrices.append(confusion_matrix)
 
-    with open(f"{args.output_filepath}.{args.output_filetype.filetype}", encoding="utf-8", mode="w+") as output_file:
-        output_file.write(args.output_filetype.title)
-        for pair_index, matrix in enumerate(confusion_matrices):
-            output_file.write(args.output_filetype.header.format(*paired_filenames[pair_index]))
-            base_line_string: str = matrix.get_printable_statistics(args.output_filetype.line, beta=args.beta)
-            output_file.write(base_line_string)
+    for filetype in args.output_type:
+        with open(f"{args.output_filepath}.{filetype.filetype}", encoding="utf-8", mode="w+") as output_file:
+            output_file.write(filetype.title)
+            for pair_index, matrix in enumerate(confusion_matrices):
+                output_file.write(filetype.header.format(**paired_filenames[pair_index]))
+                base_line_string: str = matrix.get_printable_statistics(filetype.line, beta=args.beta)
+                output_file.write(base_line_string)

@@ -1,9 +1,9 @@
 from typing import Sequence, Type
 from unittest import TestCase
 
-from pyrallelism.primitives.loading.base import BaseParallelismLoader
-from pyrallelism.primitives.loading.instantiations import TSVLoader, XMLLoader
-from pyrallelism.primitives.typing import ParallelismDirectory, Parallelism
+from src.pyrallelism.primitives.loading import BaseParallelismLoader
+from src.pyrallelism.primitives.loading import TSVLoader, XMLLoader
+from src.pyrallelism.primitives.typing import ParallelismDirectory, Parallelism
 
 
 class LoadingTester(TestCase):

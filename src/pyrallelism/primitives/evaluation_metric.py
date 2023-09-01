@@ -1,11 +1,11 @@
 from enum import StrEnum
 from typing import NamedTuple, Sequence, Type
 
-from pyrallelism.primitives.score.base import ScoringFunction
-from pyrallelism.primitives.score.instantiations import ExactScorer, MaximumParallelBranchScorer, \
+from .score.base import ScoringFunction
+from .score.instantiations import ExactScorer, MaximumParallelBranchScorer, \
     MaximumBranchAwareWordOverlapScorer, MaximumWordOverlapScorer
-from pyrallelism.primitives.size.base import SizeFunction
-from pyrallelism.primitives.size.instantiations import ParallelismSizer, BranchSizer, WordSizer
+from .size.base import SizeFunction
+from .size.instantiations import ParallelismSizer, BranchSizer, WordSizer
 
 
 class EvaluationMetric(NamedTuple):

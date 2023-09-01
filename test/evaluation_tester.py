@@ -1,10 +1,10 @@
 from typing import Sequence, TypeAlias
 from unittest import TestCase
 
-from pyrallelism.evaluator import evaluate_bipartite_parallelism_metric
-from pyrallelism.primitives.evaluation_metric import DefinedMetric, DEFINED_METRICS, EvaluationMetric, get_metric
-from pyrallelism.primitives.loading.instantiations import XMLLoader, TSVLoader
-from pyrallelism.primitives.typing import ParallelismDirectory
+from src.pyrallelism.evaluator import evaluate_bipartite_parallelism_metric
+from src.pyrallelism.primitives.evaluation_metric import DefinedMetric, DEFINED_METRICS, EvaluationMetric, get_metric
+from src.pyrallelism.primitives.loading import XMLLoader, TSVLoader
+from src.pyrallelism.primitives.typing import ParallelismDirectory
 
 AnswerDict: TypeAlias = dict[str, tuple[int, int, int]]
 

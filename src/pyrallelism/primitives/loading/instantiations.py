@@ -1,8 +1,8 @@
 from xml.etree import ElementTree as ETModule
 from xml.etree.ElementTree import Element, ElementTree
 
-from pyrallelism.primitives.loading.base import BaseParallelismLoader
-from pyrallelism.primitives.typing import TokenIdentifiers
+from .base import BaseParallelismLoader
+from ..typing import TokenIdentifiers
 
 
 class TSVLoader(BaseParallelismLoader):

@@ -43,7 +43,7 @@ TEXT_FORMAT: OutputFormat = OutputFormat(
 FORMAT_TABLE: dict[str, OutputFormat] = {DefinedFormat.CSV: CSV_FORMAT, DefinedFormat.TEXT: TEXT_FORMAT}
 
 
-def get_output_filetype(format_name: str) -> OutputFormat:
+def get_output_type(format_name: str) -> OutputFormat:
     try:
         selected_format: OutputFormat = FORMAT_TABLE[format_name]
     except KeyError:

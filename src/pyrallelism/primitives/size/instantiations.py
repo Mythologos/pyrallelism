@@ -1,6 +1,6 @@
-from pyrallelism.primitives.typing import BranchedWordSet, Parallelism
-from pyrallelism.primitives.size.base import SizeFunction
-from pyrallelism.primitives.conversion.instantiations import BranchedWordConverter
+from .base import SizeFunction
+from ..conversion.instantiations import BranchedWordConverter
+from ..typing import BranchedWordSet, Parallelism
 
 
 class ParallelismSizer(SizeFunction):

@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from pyrallelism.primitives.typing import Parallelism, ParallelismDirectory
+from ..typing import Parallelism, ParallelismDirectory
 
 
 class SizeFunction:

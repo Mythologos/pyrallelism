@@ -2,10 +2,10 @@ from typing import Any, Optional
 
 from numpy.typing import NDArray
 
-from pyrallelism.primitives.assignment.lsa import LinearSumAssigner
-from pyrallelism.primitives.evaluation_metric import EvaluationMetric
-from pyrallelism.primitives.typing import LSAComponents, ParallelismDirectory
-from pyrallelism.structures.confusion_matrix import ReducedConfusionMatrix
+from .primitives.assignment.lsa import LinearSumAssigner
+from .primitives.evaluation_metric import EvaluationMetric
+from .primitives.typing import LSAComponents, ParallelismDirectory
+from .structures.confusion_matrix import ReducedConfusionMatrix
 
 
 def evaluate_bipartite_parallelism_metric(hypotheses: ParallelismDirectory, references: ParallelismDirectory,

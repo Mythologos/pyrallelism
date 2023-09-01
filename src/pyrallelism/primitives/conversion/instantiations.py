@@ -1,5 +1,5 @@
-from pyrallelism.primitives.typing import BranchedWordSet, Parallelism
-from pyrallelism.primitives.conversion.base import BaseConverter
+from ..conversion.base import BaseConverter
+from ..typing import BranchedWordSet, Parallelism
 
 
 class BranchedWordConverter(BaseConverter):

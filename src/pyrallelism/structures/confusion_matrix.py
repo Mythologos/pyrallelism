@@ -8,7 +8,7 @@ class ReducedConfusionMatrix:
     .. py:class:: ReducedConfusionMatrix
     Data structure class to accumulate classification results. It represents a "reduced" version of a confusion matrix,
     where we cannot feasibly tabulate all the true negative values.
-    This class is intended to compute and display precision, recall, and the F-:math:`{\\beta}` scores.
+    This class is intended to compute and display precision, recall, and the F-\u03B2 scores.
     Moreover, it can aggregate such metrics across multiple individual matrices.
     """
     def __init__(self):
@@ -152,7 +152,7 @@ class ReducedConfusionMatrix:
         recall: Optional[float] = self.calculate_recall()
         f_score: Optional[float] = self.calculate_f_score(beta)
 
-        stats_display_args: dict[str, Optional[float]] = {
+        stats_display_kwargs: dict[str, Optional[float]] = {
             "score": self.score,
             "hypothesis_count": self.hypothesis_count,
             "reference_count": self.reference_count,
@@ -162,5 +162,5 @@ class ReducedConfusionMatrix:
             "beta": beta
         }
 
-        stat_results: str = output_format.format(*stats_display_args)
+        stat_results: str = output_format.format(**stats_display_kwargs)
         return stat_results

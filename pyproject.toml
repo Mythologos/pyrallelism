@@ -1,7 +1,7 @@
 [project]
 name = "pyrallelism"
 authors = [{name = "Stephen Bothwell", email = "sbothwel@nd.edu"}]
-version = "1.0.8"
+version = "1.0.9"
 description = "Interface and Utilities for Bipartite Parallelism Metrics"
 readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.11"

@@ -17,7 +17,7 @@ class TSVLoader(BaseParallelismLoader):
                 raise ValueError("The number of ID lines (sans the token) must be divisible by 2, "
                                  "with 2 IDs (for a parallelism and branch) being required per stratum.")
 
-            stratum_count: int = (len(header_items) - 1) % 2 if kwargs["stratum_count"] is None \
+            stratum_count: int = (len(header_items) - 1) // 2 if kwargs["stratum_count"] is None \
                 else kwargs["stratum_count"]
 
             data_rows: list[list[tuple[int, int]]] = []

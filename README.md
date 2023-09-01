@@ -9,7 +9,7 @@ It consists of a variety of extensible scoring utilities for the task.
 The sections below describe in more detail the contents of the codebase and provide avenues for extensions and contributions.
 For details about bipartite parallelism metrics in general, please see our paper (cited below).
 
-We release this codebase under a [**TODO**: license].
+We release this codebase under an MIT license.
 
 ## Overview
 
@@ -39,17 +39,17 @@ We provide an interface in `scorer.py` to interact with this library on a high l
 Assuming that data has been massaged into the desired formats and a user wishes to employ preexisting metrics,
 this interface presents a standard way to compute bipartite parallelism metrics between hypotheses and references.
 
-The general interface is as follows:
+The general interface is as follows (sans help messages):
 
 ```
->>> pyrallelism --help
-usage: scorer.py [-h] [--beta BETA] [--loaders LOADERS [LOADERS ...]] [--metric METRIC] [--output-filepath OUTPUT_FILEPATH]
-                 [--output-filetype OUTPUT_FILETYPE [OUTPUT_FILETYPE ...]] [--stratum-count STRATUM_COUNT]                 
-                 hypothesis_path reference_path                                                                            
-                                                                                                                           
-positional arguments:                                                                                                      
-  hypothesis_path                                                                                                          
-  reference_path                                                                                                           
+>>> pyrallelism -h
+usage: pyrallelism [-h] [--beta BETA] [--loaders LOADERS [LOADERS ...]] [--metric METRIC] [--output-filepath OUTPUT_FILEPATH] [--output-type OUTPUT_TYPE [OUTPUT_TYPE ...]]
+                   [--stratum-count STRATUM_COUNT]
+                   hypothesis_path reference_path
+
+positional arguments:
+  hypothesis_path
+  reference_path
 
 options:
   -h, --help            show this help message and exit
@@ -57,7 +57,7 @@ options:
   --loaders LOADERS [LOADERS ...]
   --metric METRIC
   --output-filepath OUTPUT_FILEPATH
-  --output-filetype OUTPUT_FILETYPE [OUTPUT_FILETYPE ...]
+  --output-type OUTPUT_TYPE [OUTPUT_TYPE ...]
   --stratum-count STRATUM_COUNT
 ```
 

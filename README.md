@@ -196,7 +196,13 @@ please open an issue or pull request to that end to start a discussion.
 To cite this library, please refer to the following paper:
 
 ```
-...
+@inproceedings{bothwellIntroducingRPD2023,
+    author = {Bothwell, Stephen and DeBenedetto, Justin and Crnkovich, Theresa and M{\"u}ller, Hildegund and Chiang, David},
+    title = "Introducing Rhetorical Parallelism Detection: {A} New Task with Datasets, Metrics, and Baselines",
+    booktitle = "Proc. EMNLP",
+    year = "2023",
+    note = "To appear"
+}
 ```
 
 Our sample data for unit testing comes from the following resource:
